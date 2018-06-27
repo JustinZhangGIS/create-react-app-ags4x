@@ -1,3 +1,16 @@
+# ags4x-react-scripts
+
+## This is an extended react script for create-react-app with ArcGIS JSAPI 4x
+
+### Usage
+
+```sh
+npx create-react-app my-app --scripts-version ags4x-react-scripts
+cd my-app
+npm start
+```
+
+
 # Create React App [![Build Status](https://travis-ci.org/facebookincubator/create-react-app.svg?branch=master)](https://travis-ci.org/facebookincubator/create-react-app)
 
 Create React apps with no build configuration.

@@ -1,8 +1,8 @@
 {
-  "name": "react-scripts",
-  "version": "1.1.4",
-  "description": "Configuration and scripts for Create React App.",
-  "repository": "facebookincubator/create-react-app",
+  "name": "ags4x-react-scripts",
+  "version": "1.0.1",
+  "description": "Extend Create React App with ArcGIS API for JavaScript 4.x.",
+  "repository": "Aiooioo/create-react-app",
   "license": "MIT",
   "engines": {
     "node": ">=6"

@@ -1,19 +1,24 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import EsriMap from 'esri/Map';
+import MapView from 'esri/views/MapView';
 import './App.css';
 
 class App extends Component {
+  componentDidMount() {
+    const map = new EsriMap({
+      basemap: "osm"
+    });
+    const view = new MapView({
+      container: this.viewDiv,  // Reference to the scene div created in step 5
+      map: map,  // Reference to the map object created before the scene
+      zoom: 4,  // Sets zoom level based on level of detail (LOD)
+      center: [15, 65]  // Sets center point of view using longitude,latitude
+    });
+  }
+
   render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+   return (
+      <div className="App" ref={(node) => {this.viewDiv = node;}} />
     );
   }
 }

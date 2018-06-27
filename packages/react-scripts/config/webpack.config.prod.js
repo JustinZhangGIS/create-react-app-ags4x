@@ -80,6 +80,8 @@ module.exports = {
       path
         .relative(paths.appSrc, info.absoluteResourcePath)
         .replace(/\\/g, '/'),
+
+    libraryTarget: 'amd',
   },
   resolve: {
     // This allows you to set a fallback for where Webpack should look for modules.
@@ -269,7 +271,7 @@ module.exports = {
     new InterpolateHtmlPlugin(env.raw),
     // Generates an `index.html` file with the <script> injected.
     new HtmlWebpackPlugin({
-      inject: true,
+      inject: false,
       template: paths.appHtml,
       minify: {
         removeComments: true,
@@ -357,6 +359,9 @@ module.exports = {
     // You can remove this if you don't use Moment.js:
     new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
   ],
+
+  externals: [/^esri/, /^dojo/, /^dojox/, /^dijit/, /^moment/],
+
   // Some libraries import Node modules but don't use them in the browser.
   // Tell Webpack to provide empty mocks for them so importing them works.
   node: {
