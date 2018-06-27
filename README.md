@@ -10,6 +10,8 @@ cd my-app
 npm start
 ```
 
+## ====== The Following desc is **forked** from facebook/create-react-app ======
+
 
 # Create React App [![Build Status](https://travis-ci.org/facebookincubator/create-react-app.svg?branch=master)](https://travis-ci.org/facebookincubator/create-react-app)
 
